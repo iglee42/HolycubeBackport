@@ -2,6 +2,8 @@ package fr.iglee42.holycubepaleoak;
 
 import com.google.common.collect.Maps;
 import com.mojang.logging.LogUtils;
+
+import it.unimi.dsi.fastutil.objects.ObjectSortedSet;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.registries.Registries;
@@ -15,6 +17,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.CreativeModeTab.TabVisibility;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -29,6 +32,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.common.util.InsertableLinkedOpenCustomHashSet;
 import net.neoforged.neoforge.event.AddReloadListenerEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.RegisterEvent;
@@ -53,7 +57,6 @@ public class HolycubePaleOak {
     public static final BlockSetType PALE_OAK_SET = BlockSetType.register(new BlockSetType("pale_oak"));
     public static final WoodType PALE_OAK_TYPE = WoodType.register(new WoodType("pale_oak", PALE_OAK_SET));
     public static final TreeGrower PALE_OAK = new TreeGrower("pale_oak", Optional.of(PALE_OAK_BONEMEAL), Optional.empty(), Optional.empty());
-    private List<ResourceKey<CreativeModeTab>> wasCreativeRegister = new ArrayList<>();
     public static Boat.Type PALE_OAK_BOAT;
 
 
@@ -67,7 +70,6 @@ public class HolycubePaleOak {
         if (FMLEnvironment.dist == Dist.CLIENT) modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::registerEvent);
-        NeoForge.EVENT_BUS.addListener(this::onReload);
 
     }
 
@@ -75,43 +77,42 @@ public class HolycubePaleOak {
 
     }
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (wasCreativeRegister.contains(event.getTabKey())) return;
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS ){
-            event.accept(HolyPOItems.PALE_OAK_LOG);
-            event.accept(HolyPOItems.PALE_OAK_WOOD);
-            event.accept(HolyPOItems.STRIPPED_PALE_OAK_LOG);
-            event.accept(HolyPOItems.STRIPPED_PALE_OAK_WOOD);
-            event.accept(HolyPOItems.PALE_OAK_PLANKS);
-            event.accept(HolyPOItems.PALE_OAK_STAIRS);
-            event.accept(HolyPOItems.PALE_OAK_SLAB);
-            event.accept(HolyPOItems.PALE_OAK_FENCE);
-            event.accept(HolyPOItems.PALE_OAK_FENCE_GATE);
-            event.accept(HolyPOItems.PALE_OAK_DOOR);
-            event.accept(HolyPOItems.PALE_OAK_TRAPDOOR);
-            event.accept(HolyPOItems.PALE_OAK_PRESSURE_PLATE);
-            event.accept(HolyPOItems.PALE_OAK_BUTTON);
-            event.accept(HolyPOItems.PALE_OAK_LEAVES);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.PALE_OAK_LOG, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.PALE_OAK_WOOD, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.STRIPPED_PALE_OAK_LOG, event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.STRIPPED_PALE_OAK_WOOD,event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.PALE_OAK_PLANKS, event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.PALE_OAK_STAIRS, event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.PALE_OAK_SLAB, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.PALE_OAK_FENCE, event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.PALE_OAK_FENCE_GATE, event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.PALE_OAK_DOOR, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.PALE_OAK_TRAPDOOR, event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.PALE_OAK_PRESSURE_PLATE,event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.PALE_OAK_BUTTON, event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS, HolyPOItems.PALE_OAK_LEAVES, event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.FUNCTIONAL_BLOCKS, HolyPOItems.PALE_OAK_SIGN, event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.FUNCTIONAL_BLOCKS,HolyPOItems.PALE_OAK_HANGING_SIGN,event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.TOOLS_AND_UTILITIES,HolyPOItems.PALE_OAK_BOAT,event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.TOOLS_AND_UTILITIES,HolyPOItems.PALE_OAK_CHEST_BOAT,event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS,HolyPOItems.PALE_OAK_SAPLING,event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS,HolyPOItems.CLOSED_EYEBLOSSOM,event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS,HolyPOItems.OPEN_EYEBLOSSOM,event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS,HolyPOItems.PALE_MOSS_BLOCK,event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS,HolyPOItems.PALE_MOSS_CARPET,event.getParentEntries(),event);
+        registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS,HolyPOItems.PALE_HANGING_MOSS,event.getParentEntries(),event);
+    }
 
-        } else if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){
-            event.accept(HolyPOItems.PALE_OAK_SIGN);
-            event.accept(HolyPOItems.PALE_OAK_HANGING_SIGN);
-        } else if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
-            event.accept(HolyPOItems.PALE_OAK_BOAT);
-            event.accept(HolyPOItems.PALE_OAK_CHEST_BOAT);
-        } else if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
-            event.accept(HolyPOItems.PALE_OAK_SAPLING);
-            event.accept(HolyPOItems.CLOSED_EYEBLOSSOM);
-            event.accept(HolyPOItems.OPEN_EYEBLOSSOM);
-            event.accept(HolyPOItems.PALE_MOSS_BLOCK);
-            event.accept(HolyPOItems.PALE_MOSS_CARPET);
-            event.accept(HolyPOItems.PALE_HANGING_MOSS);
+    private void registerItemInTab(ResourceKey<CreativeModeTab> tab, Item item,ObjectSortedSet<ItemStack> currentTab, BuildCreativeModeTabContentsEvent event){
+        if (tab.equals(event.getTabKey())){
+            ItemStack stack = new ItemStack(item);
+            if (!currentTab.contains(stack)) 
+                event.accept(stack,TabVisibility.PARENT_TAB_ONLY);
+            if (!event.getSearchEntries().contains(stack)) 
+                event.accept(stack,TabVisibility.SEARCH_TAB_ONLY);
         }
-        wasCreativeRegister.add(event.getTabKey());
     }
 
-    private void onReload(AddReloadListenerEvent event){
-        event.addListener((ResourceManagerReloadListener) resourceManager -> wasCreativeRegister.clear());
-    }
 
     private void clientSetup(FMLClientSetupEvent event){
         ItemBlockRenderTypes.setRenderLayer(HolyPOBlocks.PALE_OAK_LEAVES, RenderType.cutoutMipped());
