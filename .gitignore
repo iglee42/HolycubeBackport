@@ -5,3 +5,5 @@
 /run
 /.idea
 /gradle/wrapper/gradle-wrapper.jar
+/.vscode
+/bin
