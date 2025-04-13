@@ -101,6 +101,15 @@ public class HolycubePaleOak {
         registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS,HolyPOItems.PALE_MOSS_BLOCK,event.getParentEntries(),event);
         registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS,HolyPOItems.PALE_MOSS_CARPET,event.getParentEntries(),event);
         registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS,HolyPOItems.PALE_HANGING_MOSS,event.getParentEntries(),event);
+
+        registerItemInTab(CreativeModeTabs.INGREDIENTS,HolyPOItems.RESIN_BRICK, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.INGREDIENTS,HolyPOItems.RESIN_CLUMP, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS,HolyPOItems.RESIN_BRICKS, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS,HolyPOItems.RESIN_BRICK_STAIRS, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS,HolyPOItems.RESIN_BRICK_SLAB, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS,HolyPOItems.RESIN_BRICK_WALL, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.BUILDING_BLOCKS,HolyPOItems.CHISELED_RESIN_BRICKS, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS,HolyPOItems.RESIN_BLOCK, event.getParentEntries(), event);
     }
 
     private void registerItemInTab(ResourceKey<CreativeModeTab> tab, Item item,ObjectSortedSet<ItemStack> currentTab, BuildCreativeModeTabContentsEvent event){

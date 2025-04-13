@@ -53,6 +53,17 @@ public class HolyPOItems {
     public static final Item PALE_HANGING_MOSS = registerBlock(HolyPOBlocks.PALE_HANGING_MOSS);
     public static final Item PALE_MOSS_BLOCK = registerBlock(HolyPOBlocks.PALE_MOSS_BLOCK);
 
+    public static final Item RESIN_BLOCK = registerBlock(HolyPOBlocks.RESIN_BLOCK);
+    public static final Item RESIN_BRICKS = registerBlock(HolyPOBlocks.RESIN_BRICKS);
+    public static final Item RESIN_BRICK_STAIRS = registerBlock(HolyPOBlocks.RESIN_BRICK_STAIRS);
+    public static final Item RESIN_BRICK_SLAB = registerBlock(HolyPOBlocks.RESIN_BRICK_SLAB);
+    public static final Item RESIN_BRICK_WALL = registerBlock(HolyPOBlocks.RESIN_BRICK_WALL);
+    public static final Item CHISELED_RESIN_BRICKS = registerBlock(HolyPOBlocks.CHISELED_RESIN_BRICKS);
+    public static final Item RESIN_BRICK = registerItem("resin_brick",new Item(new Item.Properties()));
+    public static final Item RESIN_CLUMP = registerItem("resin_clump", new Item(new Item.Properties()));
+
+
+
 
 
 

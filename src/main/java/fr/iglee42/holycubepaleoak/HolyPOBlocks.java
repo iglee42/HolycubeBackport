@@ -280,6 +280,49 @@ public class HolyPOBlocks {
                     .ignitedByLava()
     );
 
+    public static final Block RESIN_BLOCK = register(
+            "resin_block", BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).sound(HolyPOSounds.RESIN)
+    );
+    public static final Block RESIN_BRICKS = register(
+            "resin_bricks",
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_ORANGE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .sound(HolyPOSounds.RESIN_BRICKS)
+                    .strength(1.5F, 6.0F)
+    );
+    public static final Block RESIN_BRICK_STAIRS = registerLegacyStair("resin_brick_stairs", RESIN_BRICKS);
+    public static final Block RESIN_BRICK_SLAB = register(
+            "resin_brick_slab",
+            p_382763_ -> new SlabBlock(p_382763_),
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_ORANGE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .sound(HolyPOSounds.RESIN_BRICKS)
+                    .strength(1.5F, 6.0F)
+    );
+    public static final Block RESIN_BRICK_WALL = register(
+            "resin_brick_wall",
+            p_382767_ -> new WallBlock(p_382767_),
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_ORANGE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .sound(HolyPOSounds.RESIN_BRICKS)
+                    .strength(1.5F, 6.0F)
+    );
+    public static final Block CHISELED_RESIN_BRICKS = register(
+            "chiseled_resin_bricks",
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_ORANGE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .sound(HolyPOSounds.RESIN_BRICKS)
+                    .strength(1.5F, 6.0F)
+    );
+
 
 
     private static Block register(String id, Function<BlockBehaviour.Properties, Block> function, BlockBehaviour.Properties properties){
@@ -323,6 +366,10 @@ public class HolyPOBlocks {
     @Deprecated
     private static Block registerLegacyStair(String p_368526_, Block p_368697_) {
         return register(p_368526_, p_368077_ -> new StairBlock(p_368697_.defaultBlockState(), p_368077_), BlockBehaviour.Properties.ofLegacyCopy(p_368697_));
+    }
+
+    private static Block register(String p_50796_, BlockBehaviour.Properties p_368759_) {
+        return register(p_50796_, Block::new, p_368759_);
     }
 
 
