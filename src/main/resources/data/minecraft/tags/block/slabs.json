@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "minecraft:resin_brick_slab"
+    "minecraft:resin_brick_slab",
+    "minecraft:grass_slab"
   ]
 }

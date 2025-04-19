@@ -20,31 +20,26 @@
       "model": "minecraft:block/grass_stairs"
     },
     "facing=east,half=top,shape=inner_left": {
-      "model": "minecraft:block/grass_stairs_inner",
-      "uvlock": true,
-      "x": 180
+      "model": "minecraft:block/grass_stairs_inner_invert",
+      "uvlock": true
     },
     "facing=east,half=top,shape=inner_right": {
-      "model": "minecraft:block/grass_stairs_inner",
+      "model": "minecraft:block/grass_stairs_inner_invert",
       "uvlock": true,
-      "x": 180,
       "y": 90
     },
     "facing=east,half=top,shape=outer_left": {
-      "model": "minecraft:block/grass_stairs_outer",
-      "uvlock": true,
-      "x": 180
+      "model": "minecraft:block/grass_stairs_outer_invert",
+      "uvlock": true
     },
     "facing=east,half=top,shape=outer_right": {
-      "model": "minecraft:block/grass_stairs_outer",
+      "model": "minecraft:block/grass_stairs_outer_invert",
       "uvlock": true,
-      "x": 180,
       "y": 90
     },
     "facing=east,half=top,shape=straight": {
-      "model": "minecraft:block/grass_stairs",
-      "uvlock": true,
-      "x": 180
+      "model": "minecraft:block/grass_stairs_invert",
+      "uvlock": true
     },
     "facing=north,half=bottom,shape=inner_left": {
       "model": "minecraft:block/grass_stairs_inner",
@@ -72,31 +67,26 @@
       "y": 270
     },
     "facing=north,half=top,shape=inner_left": {
-      "model": "minecraft:block/grass_stairs_inner",
+      "model": "minecraft:block/grass_stairs_inner_invert",
       "uvlock": true,
-      "x": 180,
       "y": 270
     },
     "facing=north,half=top,shape=inner_right": {
-      "model": "minecraft:block/grass_stairs_inner",
-      "uvlock": true,
-      "x": 180
+      "model": "minecraft:block/grass_stairs_inner_invert",
+      "uvlock": true
     },
     "facing=north,half=top,shape=outer_left": {
-      "model": "minecraft:block/grass_stairs_outer",
+      "model": "minecraft:block/grass_stairs_outer_invert",
       "uvlock": true,
-      "x": 180,
       "y": 270
     },
     "facing=north,half=top,shape=outer_right": {
-      "model": "minecraft:block/grass_stairs_outer",
-      "uvlock": true,
-      "x": 180
+      "model": "minecraft:block/grass_stairs_outer_invert",
+      "uvlock": true
     },
     "facing=north,half=top,shape=straight": {
-      "model": "minecraft:block/grass_stairs",
+      "model": "minecraft:block/grass_stairs_invert",
       "uvlock": true,
-      "x": 180,
       "y": 270
     },
     "facing=south,half=bottom,shape=inner_left": {
@@ -121,33 +111,28 @@
       "y": 90
     },
     "facing=south,half=top,shape=inner_left": {
-      "model": "minecraft:block/grass_stairs_inner",
+      "model": "minecraft:block/grass_stairs_inner_invert",
       "uvlock": true,
-      "x": 180,
       "y": 90
     },
     "facing=south,half=top,shape=inner_right": {
-      "model": "minecraft:block/grass_stairs_inner",
+      "model": "minecraft:block/grass_stairs_inner_invert",
       "uvlock": true,
-      "x": 180,
       "y": 180
     },
     "facing=south,half=top,shape=outer_left": {
-      "model": "minecraft:block/grass_stairs_outer",
+      "model": "minecraft:block/grass_stairs_outer_invert",
       "uvlock": true,
-      "x": 180,
       "y": 90
     },
     "facing=south,half=top,shape=outer_right": {
-      "model": "minecraft:block/grass_stairs_outer",
+      "model": "minecraft:block/grass_stairs_outer_invert",
       "uvlock": true,
-      "x": 180,
       "y": 180
     },
     "facing=south,half=top,shape=straight": {
-      "model": "minecraft:block/grass_stairs",
+      "model": "minecraft:block/grass_stairs_invert",
       "uvlock": true,
-      "x": 180,
       "y": 90
     },
     "facing=west,half=bottom,shape=inner_left": {
@@ -176,33 +161,28 @@
       "y": 180
     },
     "facing=west,half=top,shape=inner_left": {
-      "model": "minecraft:block/grass_stairs_inner",
+      "model": "minecraft:block/grass_stairs_inner_invert",
       "uvlock": true,
-      "x": 180,
       "y": 180
     },
     "facing=west,half=top,shape=inner_right": {
       "model": "minecraft:block/grass_stairs_inner",
       "uvlock": true,
-      "x": 180,
       "y": 270
     },
     "facing=west,half=top,shape=outer_left": {
-      "model": "minecraft:block/grass_stairs_outer",
+      "model": "minecraft:block/grass_stairs_outer_invert",
       "uvlock": true,
-      "x": 180,
       "y": 180
     },
     "facing=west,half=top,shape=outer_right": {
-      "model": "minecraft:block/grass_stairs_outer",
+      "model": "minecraft:block/grass_stairs_outer_invert",
       "uvlock": true,
-      "x": 180,
       "y": 270
     },
     "facing=west,half=top,shape=straight": {
-      "model": "minecraft:block/grass_stairs",
+      "model": "minecraft:block/grass_stairs_invert",
       "uvlock": true,
-      "x": 180,
       "y": 180
     }
   }
