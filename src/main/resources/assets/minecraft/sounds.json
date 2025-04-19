@@ -135,5 +135,183 @@
       "block/resin_bricks/resin_brick_step5"
     ],
     "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.deadbush.idle": {
+    "sounds": [
+      {
+        "name": "block/deadbush/sandblock_version/bushrustle1",
+        "volume": 4.0
+      },
+      {
+        "name": "block/deadbush/sandblock_version/bushrustle2",
+        "volume": 4.0
+      },
+      {
+        "name": "block/deadbush/sandblock_version/bushrustle3",
+        "volume": 4.0
+      },
+      {
+        "name": "block/deadbush/sandblock_version/creakysand1",
+        "volume": 4.0
+      },
+      {
+        "name": "block/deadbush/sandblock_version/crickets",
+        "volume": 4.0,
+        "weight": 3
+      },
+      {
+        "name": "block/deadbush/sandblock_version/howlingwind1",
+        "volume": 4.0
+      },
+      {
+        "name": "block/deadbush/sandblock_version/insect1",
+        "volume": 4.0
+      },
+      {
+        "name": "block/deadbush/sandblock_version/leaves",
+        "volume": 4.0
+      },
+      {
+        "name": "block/deadbush/sandblock_version/movingsand1",
+        "volume": 4.0,
+        "weight": 2
+      },
+      {
+        "name": "block/deadbush/sandblock_version/movingsand2",
+        "volume": 4.0,
+        "weight": 2
+      },
+      {
+        "name": "block/deadbush/sandblock_version/movingsand3",
+        "volume": 4.0,
+        "weight": 2
+      }
+    ],
+    "subtitle": "subtitles.block.deadbush.idle"
+  },
+  "block.firefly_bush.idle": {
+    "sounds": [
+      {
+        "name": "block/firefly_bush/firefly_bush1",
+        "volume": 4.0
+      },
+      {
+        "name": "block/firefly_bush/firefly_bush2",
+        "volume": 4.0
+      },
+      {
+        "name": "block/firefly_bush/firefly_bush3",
+        "volume": 4.0
+      },
+      {
+        "name": "block/firefly_bush/firefly_bush4",
+        "volume": 4.0
+      },
+      {
+        "name": "block/firefly_bush/firefly_bush5",
+        "volume": 4.0
+      },
+      {
+        "name": "block/firefly_bush/firefly_bush6",
+        "volume": 4.0
+      },
+      {
+        "name": "block/firefly_bush/firefly_bush7",
+        "volume": 4.0,
+        "weight": 2
+      },
+      {
+        "name": "block/firefly_bush/firefly_bush8",
+        "volume": 4.0,
+        "weight": 2
+      },
+      {
+        "name": "block/firefly_bush/firefly_bush9",
+        "volume": 4.0,
+        "weight": 2
+      },
+      {
+        "name": "block/firefly_bush/firefly_bush10",
+        "volume": 4.0,
+        "weight": 2
+      },
+      {
+        "name": "block/firefly_bush/firefly_bush11",
+        "volume": 4.0
+      }
+    ],
+    "subtitle": "subtitles.block.firefly_bush.idle"
+  },
+  "block.leaf_litter.break": {
+    "sounds": [
+      "block/leaf_litter/break1",
+      "block/leaf_litter/break2",
+      "block/leaf_litter/break3",
+      "block/leaf_litter/break4",
+      "block/leaf_litter/break5"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.leaf_litter.fall": {
+    "sounds": [
+      "block/leaf_litter/step1",
+      "block/leaf_litter/step2",
+      "block/leaf_litter/step3",
+      "block/leaf_litter/step4",
+      "block/leaf_litter/step5",
+      "block/leaf_litter/step6"
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.leaf_litter.hit": {
+    "sounds": [
+      "block/leaf_litter/step1",
+      "block/leaf_litter/step2",
+      "block/leaf_litter/step3",
+      "block/leaf_litter/step4",
+      "block/leaf_litter/step5",
+      "block/leaf_litter/step6"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.leaf_litter.place": {
+    "sounds": [
+      "block/leaf_litter/place1",
+      "block/leaf_litter/place2",
+      "block/leaf_litter/place3",
+      "block/leaf_litter/place4",
+      "block/leaf_litter/place5"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.leaf_litter.step": {
+    "sounds": [
+      "block/leaf_litter/step1",
+      "block/leaf_litter/step2",
+      "block/leaf_litter/step3",
+      "block/leaf_litter/step4",
+      "block/leaf_litter/step5",
+      "block/leaf_litter/step6"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.cactus_flower.break": {
+    "sounds": [
+      "block/cactus_flower/break1",
+      "block/cactus_flower/break2",
+      "block/cactus_flower/break3",
+      "block/cactus_flower/break4",
+      "block/cactus_flower/break5"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.cactus_flower.place": {
+    "sounds": [
+      "block/cactus_flower/place1",
+      "block/cactus_flower/place2",
+      "block/cactus_flower/place3",
+      "block/cactus_flower/place4"
+    ],
+    "subtitle": "subtitles.block.generic.place"
   }
 }

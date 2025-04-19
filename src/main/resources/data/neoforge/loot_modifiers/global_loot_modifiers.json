@@ -1,7 +1,7 @@
 {
   "replace": false,
   "entries": [
-    "holycubepaleoak:add_eyeblossom",
-    "holycubepaleoak:add_pale_sapling"
+    "holycubebackport:add_eyeblossom",
+    "holycubebackport:add_pale_sapling"
   ]
 }

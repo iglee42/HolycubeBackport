@@ -1,0 +1,31 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "fr.iglee42.holycubebackport.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "createqol.refmap.json",
+  "mixins": [
+    "AirBlockMixin",
+    "AirItemMixin",
+    "BlockEntityTypeMixin",
+    "BlocksMixin",
+    "BoatMixin",
+    "BoatTypeMixin",
+    "CactusBlockMixin",
+    "ChestBoatMixin",
+    "ComposterBlockMixin",
+    "FireBlockMixin",
+    "FlowerPotBlockMixin",
+    "ItemsMixin",
+    "TreeFeaturesMixin",
+    "TreePlacementsMixin",
+    "VegetationFeaturesMixin",
+    "VegetationPlacementsMixin"
+  ],
+  "client": [
+    "ParticleEngineMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

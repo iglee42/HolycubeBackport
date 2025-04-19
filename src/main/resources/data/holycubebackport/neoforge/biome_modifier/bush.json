@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#holycubebackport:has_bush",
+  "features": "minecraft:patch_bush",
+  "step": "vegetal_decoration"
+}
