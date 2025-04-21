@@ -40,6 +40,9 @@
   "block.minecraft.stripped_pale_oak_wood": "Stripped Pale Oak Wood",
   "block.minecraft.tall_dry_grass": "Tall Dry Grass",
   "block.minecraft.cactus_flower": "Cactus Flower",
+  "block.minecraft.resin_clump": "Resin Clump",
+  "block.minecraft.path_stairs": "Dirt Path Stairs",
+  "block.minecraft.path_slab": "Dirt Path Slab",
 
   "item.minecraft.pale_oak_boat": "Pale Oak Boat",
   "item.minecraft.pale_oak_chest_boat": "Pale Oak Boat with Chest",

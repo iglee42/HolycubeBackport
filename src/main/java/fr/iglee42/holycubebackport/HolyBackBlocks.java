@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import fr.iglee42.holycubebackport.blocks.MultifaceBlock;
 
 import java.util.function.Function;
 
@@ -320,6 +321,18 @@ public class HolyBackBlocks {
                     .strength(1.5F, 6.0F)
     );
 
+    public static final Block RESIN_CLUMP = register(
+            "resin_clump",
+            MultifaceBlock::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_ORANGE)
+                    .replaceable()
+                    .noCollission()
+                    .sound(HolyBackSounds.RESIN)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+    );
+
     public static final Block FIREFLY_BUSH = register(
             "firefly_bush",
             FireflyBushBlock::new,
@@ -344,6 +357,7 @@ public class HolyBackBlocks {
                     .ignitedByLava()
                     .pushReaction(PushReaction.DESTROY)
     );
+
 
     public static final Block SHORT_DRY_GRASS = register(
             "short_dry_grass",
@@ -395,6 +409,8 @@ public class HolyBackBlocks {
     );
     public static Block GRASS_STAIRS ;
     public static Block GRASS_SLAB ;
+    public static Block PATH_STAIRS ;
+    public static Block PATH_SLAB ;
 
 
 

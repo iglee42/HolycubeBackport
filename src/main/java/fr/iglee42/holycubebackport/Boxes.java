@@ -34,6 +34,43 @@ public class Boxes {
         return IntStream.rangeClosed(0, p_393774_).mapToObj(p_394099_).toArray(VoxelShape[]::new);
     }
 
+    public static VoxelShape boxZ(double p_393726_, double p_394571_, double p_393953_) {
+        return boxZ(p_393726_, p_393726_, p_394571_, p_393953_);
+    }
+
+    public static VoxelShape boxZ(double p_393965_, double p_393708_, double p_393930_, double p_394112_) {
+        double d0 = p_393708_ / 2.0;
+        return boxZ(p_393965_, 8.0 - d0, 8.0 + d0, p_393930_, p_394112_);
+    }
+
+    public static VoxelShape boxZ(double p_394601_, double p_394192_, double p_393712_, double p_394326_, double p_394559_) {
+        double d0 = p_394601_ / 2.0;
+        return box(8.0 - d0, p_394192_, p_394326_, 8.0 + d0, p_393712_, p_394559_);
+    }
+
+    public static Map<Direction, VoxelShape> rotateAll(VoxelShape p_394480_) {
+        return rotateAll(p_394480_, BLOCK_CENTER);
+    }
+
+    public static Map<Direction, VoxelShape> rotateAll(VoxelShape p_394143_, Vec3 p_394280_) {
+        return Maps.newEnumMap(
+                Map.of(
+                        Direction.NORTH,
+                        p_394143_,
+                        Direction.EAST,
+                        rotate(p_394143_, fromXYAngles(Quadrant.R0, Quadrant.R90), p_394280_),
+                        Direction.SOUTH,
+                        rotate(p_394143_, fromXYAngles(Quadrant.R0, Quadrant.R180), p_394280_),
+                        Direction.WEST,
+                        rotate(p_394143_, fromXYAngles(Quadrant.R0, Quadrant.R270), p_394280_),
+                        Direction.UP,
+                        rotate(p_394143_, fromXYAngles(Quadrant.R270, Quadrant.R0), p_394280_),
+                        Direction.DOWN,
+                        rotate(p_394143_, fromXYAngles(Quadrant.R90, Quadrant.R0), p_394280_)
+                )
+        );
+    }
+
     public static VoxelShape cube(double p_394458_) {
         return cube(p_394458_, p_394458_, p_394458_);
     }

@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:resin_brick_stairs",
-    "minecraft:grass_stairs"
+    "minecraft:grass_stairs",
+    "minecraft:path_stairs"
   ]
 }

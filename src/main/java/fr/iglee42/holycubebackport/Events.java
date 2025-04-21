@@ -50,6 +50,8 @@ public class Events {
         registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS, HolyBackItems.RESIN_BLOCK, event.getParentEntries(), event);
         registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS, HolyBackItems.GRASS_STAIRS, event.getParentEntries(), event);
         registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS, HolyBackItems.GRASS_SLAB, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS, HolyBackItems.PATH_STAIRS, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS, HolyBackItems.PATH_SLAB, event.getParentEntries(), event);
         registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS, HolyBackItems.FIREFLY_BUSH, event.getParentEntries(), event);
         registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS, HolyBackItems.BUSH, event.getParentEntries(), event);
         registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS, HolyBackItems.DRY_SHORT_GRASS, event.getParentEntries(), event);

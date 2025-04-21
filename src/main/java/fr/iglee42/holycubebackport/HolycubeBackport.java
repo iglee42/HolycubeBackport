@@ -97,6 +97,7 @@ public class HolycubeBackport {
         ItemBlockRenderTypes.setRenderLayer(HolyBackBlocks.TALL_DRY_GRASS, RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HolyBackBlocks.LEAF_LITTER, RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HolyBackBlocks.CACTUS_FLOWER, RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HolyBackBlocks.RESIN_CLUMP, RenderType.cutout());
 
         Minecraft.getInstance().getBlockColors().register(
                 (p_276237_, p_276238_, p_276239_, p_276240_) -> p_276238_ != null && p_276239_ != null

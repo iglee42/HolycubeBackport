@@ -49,7 +49,7 @@ public class HolyBackItems {
     public static final Item RESIN_BRICK_WALL = registerBlock(HolyBackBlocks.RESIN_BRICK_WALL);
     public static final Item CHISELED_RESIN_BRICKS = registerBlock(HolyBackBlocks.CHISELED_RESIN_BRICKS);
     public static final Item RESIN_BRICK = registerItem("resin_brick",new Item(new Item.Properties()));
-    public static final Item RESIN_CLUMP = registerItem("resin_clump", new Item(new Item.Properties()));
+    public static final Item RESIN_CLUMP = registerBlock(HolyBackBlocks.RESIN_CLUMP);
     public static final Item FIREFLY_BUSH = registerBlock(HolyBackBlocks.FIREFLY_BUSH);
     public static final Item BUSH = registerBlock(HolyBackBlocks.BUSH);
     public static final Item DRY_SHORT_GRASS = registerBlock(HolyBackBlocks.SHORT_DRY_GRASS);
@@ -60,6 +60,8 @@ public class HolyBackItems {
 
     public static Item GRASS_SLAB;
     public static Item GRASS_STAIRS;
+    public static Item PATH_SLAB;
+    public static Item PATH_STAIRS;
 
 
 
