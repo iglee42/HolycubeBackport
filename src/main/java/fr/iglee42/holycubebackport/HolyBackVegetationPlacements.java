@@ -39,6 +39,11 @@ public class HolyBackVegetationPlacements {
     public static final ResourceKey<PlacedFeature> BIRCH_LEAF_LITTER = PlacementUtils.createKey("birch_leaf_litter");
     public static final ResourceKey<PlacedFeature> FANCY_OAK_LEAF_LITTER = PlacementUtils.createKey("fancy_oak_leaf_litter");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CONFIGURED_WILDFLOWERS_BIRCH_FOREST = FeatureUtils.createKey("wildflowers_birch_forest");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CONFIGURED_WILDFLOWERS_MEADOW = FeatureUtils.createKey("wildflowers_meadow");
+
+    public static final ResourceKey<PlacedFeature> WILDFLOWERS_BIRCH_FOREST = PlacementUtils.createKey("wildflowers_birch_forest");
+    public static final ResourceKey<PlacedFeature> WILDFLOWERS_MEADOW = PlacementUtils.createKey("wildflowers_meadow");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> CONFIGURED_OAK_BEES_0002_LEAF_LITTER = FeatureUtils.createKey("oak_bees_0002_leaf_litter");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CONFIGURED_BIRCH_BEES_0002_LEAF_LITTER = FeatureUtils.createKey("birch_bees_0002_leaf_litter");

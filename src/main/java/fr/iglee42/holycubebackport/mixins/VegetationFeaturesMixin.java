@@ -11,6 +11,7 @@ import net.minecraft.data.worldgen.features.VegetationFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.PinkPetalsBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -68,6 +69,33 @@ public abstract class VegetationFeaturesMixin {
                         32, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(holycubePaleOak$leafLitterPatchBuilder(1, 3))))
                 )
         );
+
+        FeatureUtils.register(
+                p_321761_,
+                CONFIGURED_WILDFLOWERS_BIRCH_FOREST,
+                Feature.FLOWER,
+                new RandomPatchConfiguration(
+                        64,
+                        6,
+                        2,
+                        PlacementUtils.onlyWhenEmpty(
+                                Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(holycubeBackport$flowerBedPatchBuilder(HolyBackBlocks.WILDFLOWERS)))
+                        )
+                )
+        );
+        FeatureUtils.register(
+                p_321761_,
+                CONFIGURED_WILDFLOWERS_MEADOW,
+                Feature.FLOWER,
+                new RandomPatchConfiguration(
+                        8,
+                        6,
+                        2,
+                        PlacementUtils.onlyWhenEmpty(
+                                Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(holycubeBackport$flowerBedPatchBuilder(HolyBackBlocks.WILDFLOWERS)))
+                        )
+                )
+        );
     }
 
     @Unique
@@ -88,5 +116,10 @@ public abstract class VegetationFeaturesMixin {
         }
 
         return builder;
+    }
+
+    @Unique
+    private static SimpleWeightedRandomList.Builder<BlockState> holycubeBackport$flowerBedPatchBuilder(Block p_393966_) {
+        return holycubePaleOak$segmentedBlockPatchBuilder(p_393966_, 1, 4, PinkPetalsBlock.AMOUNT, PinkPetalsBlock.FACING);
     }
 }

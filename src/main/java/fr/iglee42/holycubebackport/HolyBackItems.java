@@ -56,6 +56,8 @@ public class HolyBackItems {
     public static final Item DRY_TALL_GRASS = registerBlock(HolyBackBlocks.TALL_DRY_GRASS);
     public static final Item LEAF_LITER = registerBlock(HolyBackBlocks.LEAF_LITTER);
     public static final Item CACTUS_FLOWER = registerBlock(HolyBackBlocks.CACTUS_FLOWER);
+    public static final Item WILDFLOWERS = registerBlock(HolyBackBlocks.WILDFLOWERS);
+
 
 
     public static Item GRASS_SLAB;

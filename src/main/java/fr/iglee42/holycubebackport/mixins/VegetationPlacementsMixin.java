@@ -5,10 +5,8 @@ import fr.iglee42.holycubebackport.HolyBackVegetationPlacements;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.data.worldgen.features.VegetationFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 import org.spongepowered.asm.mixin.Mixin;
@@ -74,5 +72,29 @@ public class VegetationPlacementsMixin {
                 PlacementUtils.HEIGHTMAP,
                 BiomeFilter.biome()
         );
+
+        Holder<ConfiguredFeature<?, ?>> holder51 = holdergetter.getOrThrow(CONFIGURED_WILDFLOWERS_BIRCH_FOREST);
+        Holder<ConfiguredFeature<?, ?>> holder52 = holdergetter.getOrThrow(CONFIGURED_WILDFLOWERS_MEADOW);
+
+        PlacementUtils.register(
+                p_321769_,
+                WILDFLOWERS_BIRCH_FOREST,
+                holder51,
+                CountPlacement.of(3),
+                RarityFilter.onAverageOnceEvery(2),
+                InSquarePlacement.spread(),
+                PlacementUtils.HEIGHTMAP,
+                BiomeFilter.biome()
+        );
+        PlacementUtils.register(
+                p_321769_,
+                WILDFLOWERS_MEADOW,
+                holder52,
+                NoiseThresholdCountPlacement.of(-0.8, 5, 10),
+                InSquarePlacement.spread(),
+                PlacementUtils.HEIGHTMAP,
+                BiomeFilter.biome()
+        );
+
     }
 }

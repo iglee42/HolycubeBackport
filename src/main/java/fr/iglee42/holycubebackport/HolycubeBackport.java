@@ -98,6 +98,7 @@ public class HolycubeBackport {
         ItemBlockRenderTypes.setRenderLayer(HolyBackBlocks.LEAF_LITTER, RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HolyBackBlocks.CACTUS_FLOWER, RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HolyBackBlocks.RESIN_CLUMP, RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HolyBackBlocks.WILDFLOWERS, RenderType.cutout());
 
         Minecraft.getInstance().getBlockColors().register(
                 (p_276237_, p_276238_, p_276239_, p_276240_) -> p_276238_ != null && p_276239_ != null
@@ -112,6 +113,14 @@ public class HolycubeBackport {
                 },
                 HolyBackBlocks.GRASS_SLAB,HolyBackBlocks.GRASS_STAIRS,HolyBackBlocks.BUSH
         );
+
+        Minecraft.getInstance().getBlockColors().register((p_276241_, p_276242_, p_276243_, p_276244_) -> {
+            if (p_276244_ != 0) {
+                return p_276242_ != null && p_276243_ != null ? BiomeColors.getAverageGrassColor(p_276242_, p_276243_) : GrassColor.getDefaultColor();
+            } else {
+                return -1;
+            }
+        },HolyBackBlocks.WILDFLOWERS);
 
     }
 

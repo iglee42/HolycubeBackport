@@ -407,6 +407,11 @@ public class HolyBackBlocks {
                     .sound(HolyBackSounds.CACTUS_FLOWER)
                     .pushReaction(PushReaction.DESTROY)
     );
+    public static final Block WILDFLOWERS = register(
+            "wildflowers",
+            PinkPetalsBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)
+    );
     public static Block GRASS_STAIRS ;
     public static Block GRASS_SLAB ;
     public static Block PATH_STAIRS ;

@@ -58,6 +58,7 @@ public class Events {
         registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS, HolyBackItems.DRY_TALL_GRASS, event.getParentEntries(), event);
         registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS, HolyBackItems.LEAF_LITER, event.getParentEntries(), event);
         registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS, HolyBackItems.CACTUS_FLOWER, event.getParentEntries(), event);
+        registerItemInTab(CreativeModeTabs.NATURAL_BLOCKS, HolyBackItems.WILDFLOWERS, event.getParentEntries(), event);
     }
 
     private static void registerItemInTab(ResourceKey<CreativeModeTab> tab, Item item, ObjectSortedSet<ItemStack> currentTab, BuildCreativeModeTabContentsEvent event){
